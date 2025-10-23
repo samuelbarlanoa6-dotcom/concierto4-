@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Predicador — Nací Para Adorar 2.0</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="predicador.css"> <!-- 🔹 CSS separado -->
+</head>
+
+<body>
+  <!-- 🔹 ENCABEZADO GLOBAL -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src=file:///C:/Users/USER/OneDrive/Desktop/Captura%20de%20pantalla%202025-10-23%20160744.png alt="IPUC Carrizal" />
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="invitados.html">Invitados</a>
+        <a href="musicos.html">Músicos</a>
+        <a href="predicador.html" class="cta active">Predicador</a>
+        <a href="pago.html">Entradas / Pago</a>
+        <a href="info.html">Ubicación</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🔹 CONTENIDO PRINCIPAL -->
+  <main class="container page predicador-page">
+    <h2 class="section-title">🙌 Predicador Invitado</h2>
+    <p class="subtitle-section">Conoce al siervo de Dios que compartirá el mensaje en este gran evento.</p>
+
+    <section class="predicador-card">
+      <div class="predicador-img">
+        <img src="assets/abraham.png.jpg" alt="Predicador invitado">
+      </div>
+
+      <div class="predicador-info">
+        <h3 class="nombre">Pastor <span>Abraham Baez</span></h3>
+        <p class="ciudad">📍 IPUC Carrizal — Barranquilla, Atlántico</p>
+        <p class="descripcion">
+          Un ministro apasionado por la adoración y el poder transformador del Espíritu Santo.
+          Su mensaje nos invita a vivir una vida de fe genuina y entrega total a Dios.
+        </p>
+
+        <button class="btn-conocer" id="btnMensaje">✨ Ver Mensaje Especial</button>
+      </div>
+    </section>
+
+    <!-- 🔹 Modal interactivo -->
+    <div class="modal" id="modalMensaje">
+      <div class="modal-content">
+        <span class="cerrar" id="cerrarModal">&times;</span>
+        <h3>Mensaje del Predicador</h3>
+        <p>
+          “Este evento será una experiencia de adoración única. Ven con un corazón dispuesto y
+          verás cómo el Señor hace cosas grandes en tu vida. ¡Te esperamos en Nací Para Adorar 2.0!”
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- 🔹 PIE DE PÁGINA -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© Nací Para Adorar 2.0 — IPUC Carrizal</div>
+    <div class="socials">
+      <a href=https://www.facebook.com/share/19mkJ3SqXu/ target="_blank" title="Síguenos en Facebook">Facebook</a>
+      <a href=https://www.instagram.com/ipucarrizal_?igsh=MWszb2hteXR1dDN3MQ== target="_blank" title="Síguenos en Instagram">Instagram</a>
+      <a href=https://www.tiktok.com/@ipuc.carrizal?_t=ZS-90mAzqCw1ot&_r=1 target="_blank" title="Síguenos en TikTok">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- 🔹 JS INTERACTIVO -->
+  <script>
+    const btnMensaje = document.getElementById('btnMensaje');
+    const modal = document.getElementById('modalMensaje');
+    const cerrarModal = document.getElementById('cerrarModal');
+
+    btnMensaje.addEventListener('click', () => modal.style.display = 'flex');
+    cerrarModal.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', e => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>

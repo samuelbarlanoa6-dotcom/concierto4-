@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Invitados — Nací Para Adorar 2.0</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="invitados.css"> <!-- CSS separado -->
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img src=file:///C:/Users/USER/OneDrive/Desktop/Captura%20de%20pantalla%202025-10-23%20160744.png alt="IPUC Carrizal" />
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="invitados.html" class="cta active">Invitados</a>
+                <a href="musicos.html">Músicos</a>
+                <a href="predicador.html">Predicador</a>
+                <a href="pago.html">Entradas / Pago</a>
+                <a href="info.html">Ubicación</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page invitados-page">
+        <h2 class="section-title">🎤 Nuestros Invitados</h2>
+        <p class="subtitle-section">Desliza o usa las flechas para conocer a quienes harán parte de este gran concierto.
+        </p>
+
+        <div class="slider-container">
+            <button class="arrow left" id="btnPrev">❮</button>
+            <div class="slider" id="slider">
+                <!-- Invitado 1 -->
+                <div class="slide">
+                    <img src="assets/juanpi.png.jpg"
+                        alt="Juan Pablo Murillo">
+                    <h3>Juan Pablo Murillo</h3>
+                    <p>Adorador y ministro de alabanza con un mensaje poderoso de fe.</p>
+                </div>
+
+                <!-- Invitado 2 -->
+                <div class="slide">
+                    <img src="assets/devia.png.jpg"
+                        alt="Dúo Hermanos Devia">
+                    <h3>Dúo Hermanos Devia</h3>
+                    <p>Dúo musical reconocido por su trayectoria en la adoración cristiana.</p>
+                </div>
+
+                <!-- Invitado 3 -->
+                <div class="slide">
+                    <img src="assets/jaider.png.jpg"
+                    <h3>Jaider Quintero</h3>
+                    <p>Líder de música — Distrito 8.</p>
+                </div>
+
+                <!-- Invitado 4 -->
+                <div class="slide">
+                    <img src="assets/javier.png.jpg"
+                    <h3>Javier Ruiz</h3>
+                    <p>Líder de música — Distrito 35.</p>
+                </div>
+            </div>
+            <button class="arrow right" id="btnNext">❯</button>
+        </div>
+    </main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© Nací Para Adorar 2.0 — IPUC Carrizal</div>
+    <div class="socials">
+      <a href=https://www.facebook.com/share/19mkJ3SqXu/ target="_blank" title="Síguenos en Facebook">Facebook</a>
+      <a href=https://www.instagram.com/ipucarrizal_?igsh=MWszb2hteXR1dDN3MQ== target="_blank" title="Síguenos en Instagram">Instagram</a>
+      <a href=https://www.tiktok.com/@ipuc.carrizal?_t=ZS-90mAzqCw1ot&_r=1 target="_blank" title="Síguenos en TikTok">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+
+    <script>
+        const slider = document.getElementById('slider');
+        const btnNext = document.getElementById('btnNext');
+        const btnPrev = document.getElementById('btnPrev');
+
+        let scrollAmount = 0;
+        const scrollStep = 320; // tamaño de desplazamiento
+
+        btnNext.addEventListener('click', () => {
+            slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
+        });
+
+        btnPrev.addEventListener('click', () => {
+            slider.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
